@@ -27,9 +27,13 @@ body {
   background-color: var(--color-Ice-1);
 }
 
+.h1 {
+  font-size: 1.7rem;
+}
+
 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -131,20 +135,11 @@ main {
 /* ----------------------------------------------------------- */
 
 /* BREAKPOINTS - Begin */
-@media (max-width: 575.98px) {
-  .cards {
-    grid-template-columns: 100%;
+@media (max-width: 767.98px) {
+  .h1 {
+    font-size: 1.4rem;
   }
   
-  .main {    
-    grid-template-areas:  
-    "main-left"
-    "main-middle"
-    "main-right";
-  }
-}
-
-@media (min-width: 575.99px) and (max-width: 767.98px) {
   .cards {
     grid-template-columns: 100%;
   }

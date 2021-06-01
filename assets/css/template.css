@@ -31,6 +31,10 @@ body {
   font-size: 1.7rem;
 }
 
+.h4 {
+  font-size: 1.2rem;
+}
+
 .container {
   width: 100%;
   max-width: 1400px;
@@ -111,7 +115,7 @@ header {
   height: 100%;
   border-radius: 8px;
   padding: 1rem;
-  border: 1px solid #e2e2e2;
+  /* border: 1px solid #e2e2e2; */
 }
 
 main {
@@ -129,7 +133,6 @@ main {
 
 .cards .card {
   background-color: var(--color-White);
-  /* box-shadow: 0px 0px 10px 15px #f7f7f7; */
   border-radius: 20px;
   padding: 1rem 2rem;
   min-height: 160px;
@@ -139,7 +142,7 @@ main {
   margin: 2rem 0;
   display: grid;
   grid-gap: 2rem;
-  grid-template-areas:  "main-left main-middle main-middle main-right main-right main-right";
+  grid-template-areas: "main-left main-middle main-middle main-right main-right main-right";
   padding: 0rem 2rem;
 }
 
@@ -147,7 +150,6 @@ main {
   border-radius: 20px;
   padding: 1rem 2rem;
   background-color: var(--color-White);
-  /* box-shadow: 0px 0px 10px 15px #f7f7f7; */
   min-height: 400px;
   grid-area: main-left;
 }
@@ -156,7 +158,6 @@ main {
   border-radius: 20px;
   padding: 1rem 2rem;
   background-color: var(--color-White);
-  /* box-shadow: 0px 0px 10px 15px #f7f7f7; */
   min-height: 400px;
   grid-area: main-middle;
 }
@@ -165,7 +166,6 @@ main {
   border-radius: 20px;
   padding: 1rem 2rem;
   background-color: var(--color-White);
-  /* box-shadow: 0px 0px 10px 15px #f7f7f7; */
   min-height: 400px;
   grid-area: main-right;
 }

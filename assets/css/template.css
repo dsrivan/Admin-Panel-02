@@ -60,6 +60,7 @@ header {
 .top-inner .top-inner--right {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .top-inner .top-inner--right .squareUser {
@@ -74,6 +75,43 @@ header {
   color: var(--color-Ice-1);
   font-size: 1.7rem;
   transform: rotate(90deg);
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5rem;
+  margin: 0;
+}
+
+.top-inner--right .top-inner--right-div {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-White);
+  top: 90px;
+  z-index: 99;
+  right: -1px;
+  border-radius: 8px;
+  padding: .5rem;
+  color: var(--color-Dark-1);
+  transform: translateY(-20px);
+  transition: all .3s ease-in-out;
+  border: 1px solid #e2e2e2;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.top-inner--right:hover 
+.top-inner--right-div {
+  opacity: 1;
+  transform: translateY(-10px);
+  visibility: visible;
+}
+
+.top-inner--right-div-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid #e2e2e2;
 }
 
 main {

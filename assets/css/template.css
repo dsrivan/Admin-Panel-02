@@ -411,11 +411,54 @@ text-align: center;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
-  margin-top: 40px;
+  flex-direction: column;
 }
 
 .main-middle .content .events {
   width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.main-middle .content .events .hour-assistant {
+  position: absolute;
+  width: 85%;
+  left: 58px;
+  top: 20%;
+  height: 20px;
+  z-index: 1;
+  animation: hour-assistant 5s infinite; 
+}
+
+.hour-assistant.pauseAnimation {
+  animation-play-state: paused !important;
+}
+
+.main-middle .content .events .hour-assistant::after {
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 20px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px dashed #e2e2e2;
+}
+
+.hour-assistant .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.hour-assistant .inner .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-Dark-1);
 }
 
 .main-middle .content .events .event {
@@ -429,7 +472,7 @@ text-align: center;
 }
 
 .main-middle .content .events .event .hour {
-  width: 10%;
+  width: 35px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -462,6 +505,10 @@ text-align: center;
 
 .main-middle .content .events .event.active .details::after {
   background-color: var(--color-Green);
+}
+
+.main-middle .content .events .event.disabled .details::after {
+  background-color: var(--color-Ice-3);
 }
 
 .main-middle .content .events .event .details .details-inner {
@@ -512,10 +559,63 @@ text-align: center;
   color: #949494;
 }
 
+.optionCanAnimate {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
 
+.optionCanAnimate label {
+  font-size: .7rem;
+  color: #c0c0c0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all .4s ease-in-out;
+}
 
+.optionCanAnimate input {
+  visibility: collapse;
+}
 
+.optionCanAnimate .check {
+  border: 1px solid #c0c0c0;
+  color: var(--color-White);
+  padding: 0px 5px;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: all .4s ease-in-out;
+}
 
+.optionCanAnimate .check span {  
+  transform: rotate(135deg);
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.optionCanAnimate.active label {
+  color: var(--color-Green);
+}
+
+.optionCanAnimate.active .check {
+  border: 1px solid var(--color-Green);
+  background-color: var(--color-Green);
+}
+
+.optionCanAnimate.active .check span {
+  top: 0px;
+}
+
+/* ********************************************** */
 
 .main .main-right {
   border-radius: 20px;
@@ -525,6 +625,23 @@ text-align: center;
   grid-area: main-right;
 }
 
+/* ----------------------------------------------------------- */
+/* ANIMATIONS - Begin */
+
+@keyframes hour-assistant {
+  0% {
+    top: 20%;
+  }
+  50% {
+    top: 92%;
+  }
+  100% {
+    top: -2%;
+  }
+  
+}
+
+/* ANIMATIONS - End */
 /* ----------------------------------------------------------- */
 
 /* BREAKPOINTS - Begin */

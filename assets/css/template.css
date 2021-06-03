@@ -121,7 +121,7 @@ header {
 main {
   position: absolute;
   width: 100%;
-  top: 150px;
+  top: 160px;
 }
 
 .cards {
@@ -136,6 +136,62 @@ main {
   border-radius: 20px;
   padding: 1rem 2rem;
   min-height: 160px;
+}
+
+.cards .card .titles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards .card .titles p {
+  font-size: .8rem;
+  margin-bottom: 8px;
+  color: gray;
+  font-weight: 600;
+}
+
+.cards .card .titles h3 {
+  margin-bottom: 10px;
+}
+
+.cards .card .text p {
+  font-size: .8rem;
+  margin-bottom: 15px;
+  color: gray;
+}
+
+.cards .card .ilustration img {
+  width: 50px;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+}
+
+.cards .card .img {
+  width: 35px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 1px solid #f4f4f4;
+}
+
+.imgs {
+  display: flex;
+}
+
+.imgs div {
+  background-color: var(--color-Green);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgs div span {
+  font-size: .7rem;
+  color: var(--color-White);
 }
 
 .main {
@@ -176,17 +232,16 @@ main {
 @media (max-width: 599.99px) {
   .cards,
   .main {
-    padding: 0rem .5rem;
+    padding: 0rem 1rem;
   }
 }
 
 @media (max-width: 767.98px) {
-  .h1 {
-    font-size: 1.4rem;
-  }
-  
   .cards {
     grid-template-columns: 100%;
+  }
+  .h1 {
+    font-size: 1.4rem;
   }
 
   .main {    
@@ -197,7 +252,8 @@ main {
   }
 }
 
-@media (min-width: 767.99px) and (max-width: 991.98px) {  
+@media (max-width: 991.98px) {
+
   .main {
     grid-template-areas:  
     "main-left main-middle main-middle"

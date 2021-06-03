@@ -7,7 +7,8 @@
   --color-DarkGreen: rgb(76, 161, 139);
 
   --color-Ice-1: rgba(232, 234, 241, 1);
-  --color-Ice-2: rgba(251, 252, 254 ,1);
+  --color-Ice-2: rgba(247, 247, 247 ,1);
+  --color-Ice-3: rgba(239, 241, 247, 1);
 
   --color-White: rgb(255, 255, 255, 1);
   --color-Dark-1: rgba(63, 70, 80, 1);
@@ -368,11 +369,153 @@ text-align: center;
 
 .main .main-middle {
   border-radius: 20px;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: var(--color-White);
-  min-height: 400px;
+  min-height: 500px;
   grid-area: main-middle;
 }
+
+.main .main-middle .titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 1rem;
+}
+
+.main .main-middle .titles p:first-child {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.main .main-middle .titles p:last-child {
+  font-size: 0.8rem;
+  color: #a1a1a1;
+}
+
+.main .main-middle .titles .select select {
+  background-color: var(--color-Ice-1);
+  border-color: var(--color-Ice-1);
+  padding: .2rem .7rem;
+  border-radius: 20px;
+  outline: transparent;
+  cursor: pointer;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--color-Dark-1);
+}
+
+.main-middle .content {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  margin-top: 40px;
+}
+
+.main-middle .content .events {
+  width: 100%;
+}
+
+.main-middle .content .events .event {
+  margin-bottom: 20px;
+  color: #a1a1a1;
+  padding-left: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.main-middle .content .events .event .hour {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 5px 0;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.main-middle .content .events .event .hour p {
+  font-size: .8rem;
+}
+
+.main-middle .content .events .event .details {
+  flex: 1;
+  padding-left: 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.main-middle .content .events .event .details::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.main-middle .content .events .event.active .details::after {
+  background-color: var(--color-Green);
+}
+
+.main-middle .content .events .event .details .details-inner {
+  display: flex;
+  align-items: center;
+  padding: .5rem 0 .5rem 1rem;
+  border-radius: 8px;
+  height: inherit;
+}
+
+.main-middle .content .events .event .details .details-inner img {
+  width: 40px;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.events .event.disabled .details-inner {
+  background-color: var(--color-Ice-2);
+}
+
+.events .event.active .details-inner {
+  background-color: var(--color-Ice-3);
+}
+
+.main-middle .content .events .event:hover,
+.main-middle .content .events .event:hover .details-inner {
+  background-color: var(--color-Ice-1) ;
+}
+
+.events .event .details .details-inner .texts p:first-child {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.events .event .details .details-inner .texts p:last-child {
+  font-weight: 600;
+  font-size: .8rem;
+  color: #c0c0c0;
+}
+
+.events .event.active .details .details-inner .texts p:first-child {
+  color: var(--color-Dark-1)
+}
+
+.events .event.active .details .details-inner .texts p:last-child {
+  color: #949494;
+}
+
+
+
+
+
 
 .main .main-right {
   border-radius: 20px;

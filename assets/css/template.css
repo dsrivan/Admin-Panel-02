@@ -427,7 +427,7 @@ text-align: center;
   top: 20%;
   height: 20px;
   z-index: 1;
-  animation: hour-assistant 5s infinite; 
+  animation: hour-assistant 5s infinite linear; 
 }
 
 .hour-assistant.pauseAnimation {
@@ -565,7 +565,6 @@ text-align: center;
   align-items: center;
   overflow: hidden;
   position: relative;
-  user-select: none;
 }
 
 .optionCanAnimate label {
@@ -591,6 +590,7 @@ text-align: center;
   height: 20px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
   transition: all .4s ease-in-out;
 }
 
@@ -629,14 +629,15 @@ text-align: center;
 /* ANIMATIONS - Begin */
 
 @keyframes hour-assistant {
-  0% {
+  0%,
+  100% {
     top: 20%;
+  }
+  20% {
+    top: -2%;
   }
   50% {
     top: 92%;
-  }
-  100% {
-    top: -2%;
   }
   
 }

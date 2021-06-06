@@ -1002,6 +1002,240 @@ NOVOS CÓDIGOS - INICIO
   border-color: var(--color-DarkGreen);
 }
 
+.calendar .calendar-titles-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 1rem;
+}
+
+.calendar .calendar-titles-select .p1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.calendar .calendar-titles-select .p2 {
+  font-size: 0.8rem;
+  color: #a1a1a1;
+}
+
+.calendar .calendar-titles-select .select {
+  background-color: var(--color-Ice-3);
+  padding: .2rem 1rem;
+  border-radius: 20px;
+  width: 100px;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.calendar .calendar-titles-select .select .s1 {
+  font-size: .9rem;
+}
+
+.calendar .calendar-titles-select .select .s2 {
+  transform: rotate(90deg);
+}
+
+.calendar .calendar-hourAssistant-event-optionCanAnimate {
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .hourAssistant {
+  position: absolute;
+  width: 85%;
+  left: 58px;
+  top: 20%;
+  height: 20px;
+  z-index: 1;
+  animation: hour-assistant 5s infinite linear;
+}
+
+.hourAssistant.pauseAnimation {
+  animation-play-state: paused !important;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-Dark-1);
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner::after {
+  position: absolute;
+  content: '';
+  top: 8px;
+  left: 20px;
+  width: 100%;
+  height: 1px;
+  border-bottom: 2px dashed #e2e2e2;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event {
+  margin-bottom: 20px;
+  color: #a1a1a1;
+  padding-left: 1rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  transition: all .2s ease-in-out;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .hour {
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 5px 0;
+  margin-right: 15px;
+  text-align: right;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .hour p {
+  font-size: .8rem;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details {
+  flex: 1;
+  padding-left: 2rem;
+  position: relative;
+  height: 100%;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details::after {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event.disabled .details::after {
+  background-color: var(--color-Ice-3);
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event.active .details::after {
+  background-color: var(--color-Green) !important;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details .inner {
+  display: flex;
+  align-items: center;
+  padding: .5rem 0 .5rem 1rem;
+  border-radius: 8px;
+  height: inherit;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event.disabled .details .inner {
+  background-color: var(--color-Ice-2);
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event:hover,
+.calendar-hourAssistant-event-optionCanAnimate .event.active .details .inner {
+  background-color: var(--color-Ice-3);
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details .inner img {
+  width: 40px;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details .inner .texts .p1 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event.active .details .inner .texts .p1 {
+  color: var(--color-Dark-1);
+}
+
+.calendar-hourAssistant-event-optionCanAnimate .event .details .inner .texts .p2 {
+  font-weight: 600;
+  font-size: .8rem;
+  color: #c0c0c0;
+}
+
+.optionCanAnimate {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.optionCanAnimate .divCheck {
+  border: 1px solid #c0c0c0;
+  color: var(--color-White);
+  padding: 0px 5px;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.optionCanAnimate .divCheck span {  
+  transform: rotate(135deg);
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  transition: all .2s ease-in-out;
+}
+
+.optionCanAnimate .lCanAnimate {
+  font-size: .7rem;
+  color: #c0c0c0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all .4s ease-in-out;
+}
+
+.optionCanAnimate.active .divCheck {
+  border: 1px solid var(--color-Green);
+  background-color: var(--color-Green);
+}
+
+.optionCanAnimate.active .divCheck span {
+  top: -4px;
+}
+
+.optionCanAnimate.active .lCanAnimate {
+  color: var(--color-Green);
+}
+
 /* 
   NOVOS CÓDIGOS - FIM
   ---------------------------------------------------------------

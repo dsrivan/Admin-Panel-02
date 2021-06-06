@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
 
 :root {
   --color-Blue: rgb(38, 76, 115, 1);
@@ -22,7 +23,8 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
 }
 
 body {
@@ -35,6 +37,10 @@ body {
 
 .h4 {
   font-size: 1.2rem;
+}
+
+.dNone {
+  display: none !important;
 }
 
 .container {
@@ -151,19 +157,20 @@ main {
 }
 
 .cards .card .titles p {
-  font-size: .8rem;
-  margin-bottom: 8px;
+  font-size: .7rem;
   color: #a1a1a1;
-  font-weight: 600;
 }
 
 .cards .card .titles h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.4rem;
 }
 
 .cards .card .text p {
   font-size: .8rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #a1a1a1;
 }
 
@@ -203,11 +210,11 @@ main {
 }
 
 .imgs div span {
-  font-size: .8rem;
-  font-weight: 600;
+  font-size: .7rem;
   color: var(--color-White);
 }
 
+/*
 .main {
   margin: 2rem 0;
   display: grid;
@@ -616,7 +623,7 @@ text-align: center;
 }
 
 /* ********************************************** */
-
+/*
 .main .main-right {
   grid-area: main-right;
 }
@@ -663,8 +670,6 @@ text-align: center;
 }
 
 .main-right .classes .class-inner .clas-inner-class:hover {
-  /* transform: translateY(-10px); */
-  /* height: 240px; */
   transform: rotate(-10deg) scale(1.1);
   z-index: 1;
 }
@@ -719,7 +724,7 @@ text-align: center;
 
 /* ----------------------------------------------------------- */
 /* ANIMATIONS - Begin */
-
+/*
 @keyframes hour-assistant {
   0%,
   100% {
@@ -738,6 +743,7 @@ text-align: center;
 /* ----------------------------------------------------------- */
 
 /* BREAKPOINTS - Begin */
+/*
 @media (max-width: 1199.99px) and (max-width: 1399.98px) {}
 
 @media (max-width: 1199.98px) {
@@ -786,3 +792,280 @@ text-align: center;
   }
 }
 /* BREAKPOINTS - End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  ---------------------------------------------------------------
+NOVOS CÓDIGOS - INICIO 
+*/
+
+.divMain { 
+  margin: 2rem 0 1rem 0;
+  padding: 0rem 2rem;
+  display: grid; 
+  gap: 1rem; 
+  grid-template-areas: 
+  "main-card  main-calendar main-calendar main-classes main-classes main-classes"
+  "main-exams main-calendar main-calendar main-classes main-classes main-classes"
+  "main-exams main-calendar main-calendar main-classes main-classes main-classes"
+  "main-exams main-calendar main-calendar main-statistics main-statistics main-statistics";
+}
+
+.divMain .card,
+.divMain .exams,
+.divMain .calendar,
+.divMain .classes,
+.divMain .statistics {
+  border: 1px solid;
+  border-radius: 20px;
+  min-height: 150px;
+  padding: 1rem;
+  background-color: var(--color-White);
+  border: 1px solid var(--color-White);
+  color: var(--color-Dark-1);
+}
+.divMain .exams {
+  padding: 1rem .5rem;
+}
+
+.divMain .card { grid-area: main-card; }
+.divMain .exams { grid-area: main-exams; }
+.divMain .calendar { grid-area: main-calendar; }
+.divMain .classes { grid-area: main-classes; }
+.divMain .statistics { grid-area: main-statistics; }
+
+.divMain .card .card-img-text .img,
+.divMain .card .card-img-text .text { width: 100%; }
+
+.divMain .card .card-img-text .img {
+  text-align: right;  
+}
+
+.divMain .card .card-img-text .img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: .5rem;
+  background-color: var(--color-Ice-3);
+}
+
+.divMain .card .card-img-text .text .p1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.divMain .card .card-img-text .text .p2 {
+  font-size: .8rem;
+  color: #a1a1a1;
+}
+
+.divMain .exams .exams-titles-img {
+  padding-left: .5rem;
+  padding-right: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.divMain .exams .exams-titles-img .titles .p1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.divMain .exams .exams-titles-img .titles .p2 {
+  font-size: .8rem;
+  color: #a1a1a1;
+}
+
+.divMain .exams .exams-titles-img .img img {
+  width: 60px;
+  padding: 5px;
+  background-color: var(--color-Ice-3);
+  border-radius: 50%;
+}
+
+.divMain .exams .exams-items-button {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.divMain .exams .exams-items-button .item-titles-progress {
+  padding: .5rem;
+  border-bottom: 1px solid var(--color-Ice-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: all .2s ease-in-out;
+}
+
+.divMain .exams .exams-items-button .item-titles-progress:hover {
+  background-color: var(--color-Ice-1);
+}
+
+.divMain .exams .exams-items-button .item-titles-progress:hover .progress {
+  transform: scale(1.2);
+}
+
+.divMain .exams .exams-items-button .item-titles-progress .titles .p1 {
+  font-size: .9rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.divMain .exams .exams-items-button .item-titles-progress .titles .p2 {
+  font-size: .7rem;
+  color: #a1a1a1;
+}
+
+.divMain .exams .exams-items-button .item-titles-progress .progress .s1 {
+  font-size: .8rem;
+  font-weight: 600;
+  color: gray;
+}
+
+.progress {
+  width: 50px;
+  height: 50px;
+  border: 5px solid lightgray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.progress.progress25::after,
+.progress.progress50::after,
+.progress.progress75::after {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top-color: var(--color-Green);
+}
+
+.progress.progress25::after {
+  border-top-color: var(--color-Green);
+}
+
+.progress.progress50::after {
+  border-top-color: var(--color-Green);
+  border-right-color: var(--color-Green);
+}
+
+.progress.progress75::after {
+  border-top-color: var(--color-Green);
+  border-right-color: var(--color-Green);
+  border-bottom-color: var(--color-Green);
+}
+
+.exams-items-button .button {
+  text-align: center;
+}
+
+.exams-items-button .btn {
+  margin-top: 15px;
+  background-color: var(--color-Green);
+  border: 1px solid var(--color-Green);
+  color: var(--color-White);
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.exams-items-button .btn:hover {
+  background-color: var(--color-DarkGreen);
+  border-color: var(--color-DarkGreen);
+}
+
+/* 
+  NOVOS CÓDIGOS - FIM
+  ---------------------------------------------------------------
+  ANIMATIONS - BEGIN 
+*/
+
+@keyframes hour-assistant {
+  0%,
+  100% { top: 20%; }
+  20% { top: -2%; }
+  50% { top: 92%; }
+}
+
+/* 
+  ANIMATIONS - END
+  ---------------------------------------------------------------
+  BREAKPOINTS - BEGIN
+*/
+
+@media (max-width: 991.98px) {
+  .divMain {
+    grid-template-areas: 
+    "main-card"
+    "main-exams"
+    "main-calendar"
+    "main-classes"
+    "main-statistics";
+  }
+
+  .divMain {
+    grid-template-areas: 
+    "main-card main-card main-calendar main-calendar main-calendar"
+    "main-exams main-exams main-calendar main-calendar main-calendar"
+    "main-classes main-classes main-statistics main-statistics main-statistics";
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cards {
+    grid-template-columns: 100%;
+  }
+
+  .divMain {
+    grid-template-areas: 
+    "main-card"
+    "main-exams"
+    "main-calendar"
+    "main-classes"
+    "main-statistics";
+  }
+
+  .h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 599.99px) {
+  .cards,
+  .divMain {
+    padding: 0rem 1rem;
+  }
+}
+
+/* 
+  BREAKPOINTS - END
+  ---------------------------------------------------------------
+*/

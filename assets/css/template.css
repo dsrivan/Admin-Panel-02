@@ -823,10 +823,10 @@ NOVOS CÓDIGOS - INICIO
   display: grid; 
   gap: 1rem; 
   grid-template-areas: 
-  "main-card  main-calendar main-calendar main-classes main-classes main-classes"
-  "main-exams main-calendar main-calendar main-classes main-classes main-classes"
-  "main-exams main-calendar main-calendar main-classes main-classes main-classes"
-  "main-exams main-calendar main-calendar main-statistics main-statistics main-statistics";
+  "main-card  main-calendar main-classes main-classes main-classes main-classes"
+  "main-exams main-calendar main-classes main-classes main-classes main-classes"
+  "main-exams main-calendar main-classes main-classes main-classes main-classes"
+  "main-exams main-calendar main-statistics main-statistics main-statistics main-statistics";
 }
 
 .divMain .card,

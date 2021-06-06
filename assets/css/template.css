@@ -1008,6 +1008,7 @@ NOVOS CÓDIGOS - INICIO
   align-items: center;
   margin-top: 20px;
   padding: 0 1rem;
+  margin-bottom: 40px;
 }
 
 .calendar .calendar-titles-select .p1 {
@@ -1033,6 +1034,10 @@ NOVOS CÓDIGOS - INICIO
   cursor: pointer;
 }
 
+.calendar .calendar-titles-select .select:focus-visible {
+  outline: transparent;
+}
+
 .calendar .calendar-titles-select .select .s1 {
   font-size: .9rem;
 }
@@ -1041,7 +1046,7 @@ NOVOS CÓDIGOS - INICIO
   transform: rotate(90deg);
 }
 
-.calendar .calendar-hourAssistant-event-optionCanAnimate {
+.calendar .calendar-hourAssistant-event {
   max-height: 500px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1049,10 +1054,10 @@ NOVOS CÓDIGOS - INICIO
   flex-direction: column;
   width: 100%;
   position: relative;
-  margin-top: 40px;
+  padding-top: 10px;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .hourAssistant {
+.calendar-hourAssistant-event .hourAssistant {
   position: absolute;
   width: 85%;
   left: 58px;
@@ -1066,7 +1071,7 @@ NOVOS CÓDIGOS - INICIO
   animation-play-state: paused !important;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner {
+.calendar-hourAssistant-event .hourAssistant .inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1076,14 +1081,14 @@ NOVOS CÓDIGOS - INICIO
   border-radius: 50%;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner .dot {
+.calendar-hourAssistant-event .hourAssistant .inner .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: var(--color-Dark-1);
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .hourAssistant .inner::after {
+.calendar-hourAssistant-event .hourAssistant .inner::after {
   position: absolute;
   content: '';
   top: 8px;
@@ -1093,7 +1098,7 @@ NOVOS CÓDIGOS - INICIO
   border-bottom: 2px dashed #e2e2e2;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event {
+.calendar-hourAssistant-event .event {
   margin-bottom: 20px;
   color: #a1a1a1;
   padding-left: 1rem;
@@ -1104,7 +1109,10 @@ NOVOS CÓDIGOS - INICIO
   transition: all .2s ease-in-out;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .hour {
+.calendar-hourAssistant-event .event:first-child {  
+  margin-top: 40px;
+}
+.calendar-hourAssistant-event .event .hour {
   width: 35px;
   display: flex;
   flex-direction: column;
@@ -1113,20 +1121,21 @@ NOVOS CÓDIGOS - INICIO
   padding: 5px 0;
   margin-right: 15px;
   text-align: right;
+  transition: all .3s ease-in-out;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .hour p {
+.calendar-hourAssistant-event .event .hour p {
   font-size: .8rem;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details {
+.calendar-hourAssistant-event .event .details {
   flex: 1;
   padding-left: 2rem;
   position: relative;
   height: 100%;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details::after {
+.calendar-hourAssistant-event .event .details::after {
   position: absolute;
   content: '';
   width: 5px;
@@ -1136,55 +1145,68 @@ NOVOS CÓDIGOS - INICIO
   border-radius: 8px;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event.disabled .details::after {
+.calendar-hourAssistant-event .event.disabled .details::after {
   background-color: var(--color-Ice-3);
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event.active .details::after {
+.calendar-hourAssistant-event .event.active .details::after {
   background-color: var(--color-Green) !important;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details .inner {
+.calendar-hourAssistant-event .event .details .inner {
   display: flex;
   align-items: center;
   padding: .5rem 0 .5rem 1rem;
   border-radius: 8px;
   height: inherit;
+  transition: all .3s ease-in-out;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event.disabled .details .inner {
+.calendar-hourAssistant-event .event.disabled .details .inner {
   background-color: var(--color-Ice-2);
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event:hover,
-.calendar-hourAssistant-event-optionCanAnimate .event.active .details .inner {
+.calendar-hourAssistant-event .event.active .details .inner {
   background-color: var(--color-Ice-3);
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details .inner img {
+.calendar-hourAssistant-event .event .details .inner img {
   width: 40px;
   padding: 5px;
   background-color: #f4f4f4;
   border-radius: 50%;
   margin-right: 10px;
+  transition: all .3s ease-in-out;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details .inner .texts .p1 {
+.calendar-hourAssistant-event .event:hover .hour {
+  padding: 15px 0;
+}
+
+.calendar-hourAssistant-event .event:hover .details .inner {
+  padding-left: 2rem !important;
+}
+
+.calendar-hourAssistant-event .event:hover .details .inner img {
+  width: 70px;
+}
+
+.calendar-hourAssistant-event .event .details .inner .texts .p1 {
   font-weight: 600;
   margin-bottom: 5px;
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event.active .details .inner .texts .p1 {
+.calendar-hourAssistant-event .event.active .details .inner .texts .p1 {
   color: var(--color-Dark-1);
 }
 
-.calendar-hourAssistant-event-optionCanAnimate .event .details .inner .texts .p2 {
+.calendar-hourAssistant-event .event .details .inner .texts .p2 {
   font-weight: 600;
   font-size: .8rem;
   color: #c0c0c0;
 }
 
-.optionCanAnimate {
+.calendar .optionCanAnimate {
   padding: 0 1rem;
   display: flex;
   align-items: center;
@@ -1192,7 +1214,7 @@ NOVOS CÓDIGOS - INICIO
   position: relative;
 }
 
-.optionCanAnimate .divCheck {
+.calendar .optionCanAnimate .divCheck {
   border: 1px solid #c0c0c0;
   color: var(--color-White);
   padding: 0px 5px;
@@ -1205,7 +1227,7 @@ NOVOS CÓDIGOS - INICIO
   transition: all .4s ease-in-out;
 }
 
-.optionCanAnimate .divCheck span {  
+.calendar .optionCanAnimate .divCheck span {
   transform: rotate(135deg);
   position: absolute;
   top: -20px;
@@ -1213,7 +1235,7 @@ NOVOS CÓDIGOS - INICIO
   transition: all .2s ease-in-out;
 }
 
-.optionCanAnimate .lCanAnimate {
+.calendar .optionCanAnimate .lCanAnimate {
   font-size: .7rem;
   color: #c0c0c0;
   cursor: pointer;
@@ -1223,16 +1245,16 @@ NOVOS CÓDIGOS - INICIO
   transition: all .4s ease-in-out;
 }
 
-.optionCanAnimate.active .divCheck {
+.calendar .optionCanAnimate.active .divCheck {
   border: 1px solid var(--color-Green);
   background-color: var(--color-Green);
 }
 
-.optionCanAnimate.active .divCheck span {
+.calendar .optionCanAnimate.active .divCheck span {
   top: -4px;
 }
 
-.optionCanAnimate.active .lCanAnimate {
+.calendar .optionCanAnimate.active .lCanAnimate {
   color: var(--color-Green);
 }
 
@@ -1245,8 +1267,8 @@ NOVOS CÓDIGOS - INICIO
 @keyframes hour-assistant {
   0%,
   100% { top: 20%; }
-  20% { top: -2%; }
-  50% { top: 92%; }
+  20% { top: 0%; }
+  50% { top: 93%; }
 }
 
 /* 

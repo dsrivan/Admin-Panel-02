@@ -1184,11 +1184,7 @@ NOVOS CÓDIGOS - INICIO
 }
 
 .calendar-hourAssistant-event .event:hover .details .inner {
-  padding-left: 2rem !important;
-}
-
-.calendar-hourAssistant-event .event:hover .details .inner img {
-  width: 70px;
+  transform: translateX(-1rem);
 }
 
 .calendar-hourAssistant-event .event .details .inner .texts .p1 {

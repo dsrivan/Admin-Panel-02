@@ -720,8 +720,6 @@ NOVOS CÓDIGOS - INICIO
   background-color: var(--color-Rose);
 }
 
-/*.aqui {}*/
-
 .statistics .titles-checks {
    padding: 0 1rem; 
    margin-bottom: 40px;
@@ -834,6 +832,17 @@ NOVOS CÓDIGOS - INICIO
   .cards,
   .divMain {
     padding: 0rem 1rem;
+  }
+
+  .statistics .titles-checks {
+   margin-bottom: 10px;
+   align-items: initial;
+   flex-direction: column;
+  }
+
+  .statistics .titles-checks .checks {
+    justify-content: center;
+    margin-top: .5rem;
   }
 }
 

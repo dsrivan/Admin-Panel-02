@@ -32,12 +32,13 @@
     <link rel="stylesheet" type="text/css" href="assets/css/template.css?id=2021">
 </head>
 <body>
+    <div class="overlay"></div>
     <header>
         <div class="container">
             <div class="top-inner">
                 <div class="top-inner--left">Upcoming events</div>
                 <div class="top-inner--middle">
-                    <h1 class="h1">Virtual School</h1>
+                    <h1>Virtual School</h1>
                 </div>
                 <div class="top-inner--right">
                     <div class="squareUser">
@@ -46,13 +47,13 @@
                     <span class="chevron-down">&rsaquo;</span>
                     <div class="top-inner--right-div">
                         <div class="top-inner--right-div-inner">
-                            <h4 class="h4">Title</h4>
-                            <hr style="margin: 5px 0 20px 0; background-color: #e2e2e2" />
+                            <h4>MENU</h4>
+                            <hr />
                             <p>Lorem ipsum dolor sit amet</p>
-                            <ul style="margin: 1rem 0 0 2rem;">
-                                <li>Lorem a</li>
-                                <li>Dolor b</li>
-                                <li>Ipsum c</li>
+                            <ul>
+                                <li>Consectetur</li>
+                                <li>Teturum</li>
+                                <li>Dipisicing</li>
                             </ul>
                         </div>
                     </div>
@@ -394,5 +395,16 @@
     
     <!-- Main JS -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+
+        document.querySelector('input[type="button"].btn')
+        .addEventListener(
+            'click',
+            cliked => {
+                document.querySelector('body').classList.add('showOverlay');
+                setTimeout(() => document.location.reload(), 5000);
+            }
+        );
+    </script>
 </body>
 </html>

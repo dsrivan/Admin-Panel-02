@@ -116,7 +116,8 @@ body.showOverlay { overflow: hidden !important; }
 
 .shadow-bottom:hover,
 .shadow-bottom-right:hover { 
-  transform: translateY(-5px); 
+  /* transform: translateY(-5px);  */
+  box-shadow: 5px 5px 10px #727272; 
 }
 
 .container {

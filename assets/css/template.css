@@ -106,6 +106,19 @@ body.showOverlay { overflow: hidden !important; }
   display: none !important;
 }
 
+.shadow-bottom { 
+  box-shadow: 0px 10px 10px #c3c3c3; 
+}
+
+.shadow-bottom-right { 
+  box-shadow: 5px 5px 10px #c3c3c3; 
+}
+
+.shadow-bottom:hover,
+.shadow-bottom-right:hover { 
+  transform: translateY(-5px); 
+}
+
 .container {
   width: 100%;
   max-width: 1400px;
@@ -221,6 +234,7 @@ main {
   border-radius: 20px;
   padding: 1rem 2rem;
   min-height: 160px;
+  transition: all .3s ease-in-out;
 }
 
 .cards .card .titles {
@@ -313,6 +327,7 @@ NOVOS CÓDIGOS - INICIO
   background-color: var(--color-White);
   border: 1px solid var(--color-White);
   color: var(--color-Dark-1);
+  transition: all .2s ease-in-out;
 }
 .divMain .exams {
   padding: 1rem 1.5rem;
@@ -325,7 +340,9 @@ NOVOS CÓDIGOS - INICIO
 .divMain .statistics { grid-area: main-statistics; }
 
 .divMain .card .card-img-text .img,
-.divMain .card .card-img-text .text { width: 100%; }
+.divMain .card .card-img-text .text {
+  width: 100%; 
+}
 
 .divMain .card .card-img-text .img {
   text-align: right;  
@@ -767,12 +784,18 @@ NOVOS CÓDIGOS - INICIO
   padding: 10px;
   background-color: #00000013;
   border-radius: 50%;
+  transition: all .2s ease-in-out;
+}
+
+.your-classes .titles-classes .classes .class-img-title:hover .img img {
+  width: 90px;
 }
 
 .your-classes .titles-classes .classes .class-img-title .title span {
   display: block;
   font-weight: 600;
   color: var(--color-White);
+  transition: all .2s ease-in-out;
 }
 
 .class-img-title.bg-green {

@@ -12,25 +12,40 @@ const hourAssistant = document.querySelector('.hourAssistant');
 // the checkbox label than show the message 'HOUR ASSISTANT ANIMATION'
 const optionCanAnimate = document.querySelector('.optionCanAnimate');
 
-function toggleAnimation(){
-    hourAssistant.classList.toggle('pauseAnimation');
-    optionCanAnimate.classList.toggle('active');
+function toggleAnimation() {
+  hourAssistant.classList.toggle('pauseAnimation');
+  optionCanAnimate.classList.toggle('active');
 }
 
+/* for 'See All' Click  - Begin */
+document
+  .querySelector('.button')
+  .addEventListener("click", (cliked) => {
+    document.querySelector("body").classList.add("showOverlay");
+    setTimeout(
+      () =>
+        document
+          .querySelector(".overlay-inner")
+          .classList.remove("dNone"),
+      1900
+    );
+    setTimeout(() => document.location.reload(), 7000);
+  });
+/* for 'See All' Click  - End */
 
 /* ------------------ CHART ------------------ */
 
 var options = {
-    series: [{
+  series: [{
     name: 'A',
-    data: [9, 55, 41, 67, 22, 43]
+    data: [9, 45, 16, 37, 22, 6, 9, 45, 16, 37, 22, 6]
   }, {
     name: 'B',
-    data: [13, 23, 20, 8, 13, 27]
+    data: [13, 20, 25, 18, 13, 10, 13, 20, 25, 18, 13, 10]
   }],
-    chart: {
+  chart: {
     type: 'bar',
-    height: 280,
+    height: 240,
     stacked: true,
     toolbar: {
       show: false
@@ -56,15 +71,19 @@ var options = {
     },
   },
   xaxis: {
-    type: 'datetime',
+    type: 'string',
     categories: [
-        '01/01/2011 GMT', 
-        '01/02/2011 GMT', 
-        '01/03/2011 GMT', 
-        '01/04/2011 GMT',
-        '01/05/2011 GMT',
-        '01/06/2011 GMT'
-      ],
+      'Sep',
+      'Out',
+      'Nov',
+      'Dez',
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun'
+    ],
   },
   legend: {
     position: 'right',

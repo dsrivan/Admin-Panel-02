@@ -4,7 +4,7 @@
 
 ## Demonstration
 
-> _Image Inspiration_
+> _Image Inspiration__
 > ![Demo: 'Admin Panel v2'](assets/images/demo/inspiration/inspiration.jpg)
 
 ### Description
@@ -33,13 +33,13 @@ No have dependencies.
 &nbsp;
 
 #### `Demo: 'Desktop Version' `
-> _Desktop Version_
+> _Desktop Version__
 ![Demo: 'demo'](assets/images/demo/inspiration/demo.gif)
 
 &nbsp;
 
 #### `Demo: 'Mobile Version' `
-> _Mobile Version_ 
+> _Mobile Version__
 ![Demo: 'demoResponsive'](assets/images/demo//inspiration/demoResponsive.gif)
 
 &nbsp;

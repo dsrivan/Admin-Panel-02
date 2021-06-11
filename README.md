@@ -10,10 +10,8 @@
 ### Description
 
 This project is about a Admin Panel version/model 2.
-About the inspiration above:
-'I didn't find the design on the author website ('Fusion Lab' maybe), so I don't will mencionaste him.'
 
-And finally, I'll repeat: This development is only a study!
+This development is only a study!
 It don't for professional use!
 
 ### For look the result.
@@ -35,14 +33,14 @@ No have dependencies.
 &nbsp;
 
 #### `Demo: 'Desktop Version' `
-
-> _Desktop Version_ > ![Demo: 'demo'](assets/images/demo//inspiration/demo.gif)
+> _Desktop Version_
+![Demo: 'demo'](assets/images/demo/inspiration/demo.gif)
 
 &nbsp;
 
 #### `Demo: 'Mobile Version' `
-
-> _Mobile Version_ > ![Demo: 'demoResponsive'](assets/images/demo//inspiration/demoResponsive.gif)
+> _Mobile Version_ 
+![Demo: 'demoResponsive'](assets/images/demo//inspiration/demoResponsive.gif)
 
 &nbsp;
 

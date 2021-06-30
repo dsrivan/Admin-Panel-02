@@ -543,12 +543,12 @@ NOVOS CÓDIGOS - INICIO
   width: 10px;
   height: 10px;
   display: block;
-  background-color: rgb(172, 172, 172);
+  background-color: rgb(233, 233, 233);
   border-radius: 50%;
   position: absolute;
   top: 55%;
   right: 2rem;
-  animation: transformScale 1s linear forwards infinite;
+  animation: transformScale 2s linear forwards infinite;
 }
 
 .exams-items-button .btn:hover {
@@ -955,10 +955,10 @@ NOVOS CÓDIGOS - INICIO
 @keyframes transformScale {
   0%,
   100% {
-    transform: scale(1);
+    transform: scale(0.5);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1);
   }
 }
 
